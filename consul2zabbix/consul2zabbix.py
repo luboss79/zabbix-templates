@@ -34,7 +34,9 @@ def serviceDiscovery():
     services = getNodeServices()
     for service in services:
         if service['CheckID'] != 'serfHealth':
-            zbx_item = {"{#SERVICEID}": service['ServiceID']}
+            output = service['Output']
+            healthcheck_url = output.split('  ')[0].split('HTTP GET ')[1].split(': 200')[0].split('http://')[1]
+            zbx_item = {"{#SERVICEID}": service['ServiceID'], "{#HEALTHCHECK}": healthcheck_url}
             discovery_list['data'].append(zbx_item)
     print(json.dumps(discovery_list, indent=4, sort_keys=True))
 

@@ -5,8 +5,9 @@ You can register service on consul and see it status on zabbix.
 It provide:
 1. Autodetect consul services.
 2. Consul health check status to zabbix.
-3. Alerts if consul health check fail
-4. Report status of consul node
+3. Add the URL of the discovered consul service to the host trigger definition (URL and description)
+4. Alerts if consul health check fail
+5. Report status of consul node
 
 
 

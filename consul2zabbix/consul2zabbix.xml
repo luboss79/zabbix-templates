@@ -142,10 +142,10 @@
                             <name>{#SERVICEID} status on {HOSTNAME}</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
-                            <url/>
+                            <url>http://{#HEALTHCHECK}</url>
+                            <description>Healthcheck URL is http://{#HEALTHCHECK}</description>
                             <status>0</status>
-                            <priority>1</priority>
-                            <description/>
+                            <priority>3</priority>
                             <type>0</type>
                             <manual_close>0</manual_close>
                             <dependencies/>
